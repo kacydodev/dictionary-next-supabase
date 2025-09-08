@@ -6,10 +6,10 @@ import React, { useState } from 'react';
 
 export default function Searchbar() {
 	// TODO: search bar display current query word. Zustand?
-	// TODO: error boundary for query NaN, undefined, minChar
 	const [isDirty, setIsDirty] = useState<boolean | null>(null);
-	const [input, setInput] = useState<string | null>(null);
+	const [input, setInput] = useState<string>('');
 	const [error, setError] = useState<string | null>(null);
+	const buttonState = !isDirty || error ? 'btn-disabled' : '';
 
 	// Accepts only alphabets, space and hyphens
 	const regex = /^[a-zA-Z- ]*$/gm;
@@ -34,7 +34,7 @@ export default function Searchbar() {
 	}
 
 	return (
-		<form action={submitForm} className='relative w-full mb-6'>
+		<form action={`/lookup/${input}`} className='relative w-full mb-6'>
 			<div className='join w-full'>
 				<input
 					onMouseDown={() => setIsDirty(true)}
@@ -45,11 +45,14 @@ export default function Searchbar() {
 					placeholder='Search dictionary'
 					className='input join-item w-full pl-4 bg-base-200 rounded-l-full'
 				/>
-				<button type='submit' className='btn btn-primary join-item shadow-none'>
+				<button
+					type='submit'
+					className={`btn btn-primary join-item shadow-none ${buttonState}`}
+				>
 					<MagnifyingGlassIcon className='size-6' />
 				</button>
 			</div>
-			<p className='absolute bottom-0 ml-4 text-sm md:text-base text-error'>
+			<p className={`absolute bottom-0 ml-4 text-sm md:text-base text-error`}>
 				{error ? error : ' '}
 			</p>
 		</form>
