@@ -1,7 +1,7 @@
 'use client';
 
-import { submitForm } from '@/app/actions';
 import { MagnifyingGlassIcon } from '@heroicons/react/24/outline';
+import { useParams } from 'next/navigation';
 import React, { useState } from 'react';
 
 export default function Searchbar() {
@@ -9,6 +9,7 @@ export default function Searchbar() {
 	const [isDirty, setIsDirty] = useState<boolean | null>(null);
 	const [input, setInput] = useState<string>('');
 	const [error, setError] = useState<string | null>(null);
+	const { query } = useParams();
 	const buttonState = !isDirty || error ? 'btn-disabled' : '';
 
 	// Accepts only alphabets, space and hyphens
@@ -23,13 +24,11 @@ export default function Searchbar() {
 
 	function handleOnChange(e: React.ChangeEvent<HTMLInputElement>) {
 		const formInput = e.target.value;
-
 		if (isDirty && !formInput.match(regex)) {
 			setError(`Only letters and hyphens (-) are accepted`);
 		} else if (isDirty && formInput.match(regex)) {
 			setError(null);
 		}
-
 		setInput(formInput);
 	}
 
@@ -40,6 +39,7 @@ export default function Searchbar() {
 					onMouseDown={() => setIsDirty(true)}
 					onBlur={handleOnBlur}
 					onChange={handleOnChange}
+					defaultValue={query}
 					type='text'
 					name='query'
 					placeholder='Search dictionary'
