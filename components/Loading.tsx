@@ -3,7 +3,7 @@ import { SyncLoader } from 'react-spinners';
 export default function Loading() {
 	return (
 		<div className='h-[65%] flex items-center justify-center'>
-			<SyncLoader color={'red'} cssOverride={{ opacity: '70%' }} />
+			<SyncLoader className='*:bg-primary!' />
 		</div>
 	);
 }
