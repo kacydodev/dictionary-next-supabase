@@ -36,7 +36,7 @@
 }
 
 @layer base {
-	/* Fixed Parameters, DO NOT CHANGE */
+	/* Fixed parameters, DO NOT CHANGE */
 	html {
 		@apply h-full;
 	}
@@ -93,10 +93,6 @@
 		@apply space-y-2.5! md:space-y-3.5!;
 	}
 
-	main > section > * > * {
-		/* @apply border-1 border-red-500; */
-	}
-
 	h1,
 	h2 {
 		@apply font-black;
@@ -107,5 +103,4 @@
 	--font-sans: 'Inter', sans-serif;
 	--font-serif: 'Lora', serif;
 	--font-mono: 'Inconsolata', monospace;
-	/* --color-primary: #a445ed; */
 }

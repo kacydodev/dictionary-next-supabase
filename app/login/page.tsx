@@ -1,6 +1,7 @@
 import { login, signup } from './actions';
 
 export default function LoginPage() {
+	// TODO: magic link, user management
 	return (
 		<form>
 			<label htmlFor='email'>Email:</label>
