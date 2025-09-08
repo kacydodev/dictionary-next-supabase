@@ -1,15 +1,16 @@
+'use client';
+
 import Image from 'next/image';
 import notFound from '../../../assets/images/undraw_page-eaten_b2rt.svg';
 import Link from 'next/link';
 import { ArrowUturnLeftIcon } from '@heroicons/react/24/outline';
 import Searchbar from '@/components/Searchbar';
+import { useFontContext } from '@/utils/contexts';
+import { useParams } from 'next/navigation';
 
-export default async function ErrorPage({
-	params,
-}: {
-	params: Promise<{ code: string }>;
-}) {
-	const { code } = await params;
+export default function ErrorPage() {
+	const currentFont = useFontContext();
+	const { code } = useParams();
 	const displayError = () => {
 		if (code === '404') {
 			return (
@@ -40,7 +41,7 @@ export default async function ErrorPage({
 	};
 
 	return (
-		<main className='space-y-16'>
+		<main className={`space-y-16 ${currentFont.fontSlug}`}>
 			<Searchbar />
 			{displayError()}
 		</main>
