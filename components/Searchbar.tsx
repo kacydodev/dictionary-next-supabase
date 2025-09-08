@@ -5,7 +5,6 @@ import { useParams } from 'next/navigation';
 import React, { useState } from 'react';
 
 export default function Searchbar() {
-	// TODO: search bar display current query word. Zustand?
 	const [isDirty, setIsDirty] = useState<boolean | null>(null);
 	const [input, setInput] = useState<string>('');
 	const [error, setError] = useState<string | null>(null);

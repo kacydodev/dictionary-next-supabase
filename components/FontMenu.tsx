@@ -34,12 +34,17 @@ export default function FontMenu() {
 			<MenuItems
 				as='ul'
 				anchor='bottom'
+				// className='flex flex-col items-start rounded shadow-lg/20 bg-white dark:bg-primary dark:text-white text-sm md:text-base'
 				className='flex flex-col items-start rounded shadow-lg/20 bg-white dark:bg-primary dark:text-white text-sm md:text-base'
 			>
 				{fontOptions.map((font) => {
 					return (
 						<MenuItem key={font.fontSlug}>
-							<li onClick={() => setFont(font)} className='px-6 py-3'>
+							{/* <li onClick={() => setFont(font)} className='w-full px-6 py-3'> */}
+							<li
+								onClick={() => setFont(font)}
+								className='w-full px-6 py-3 hover:bg-secondary odd:not-last:border-b-1 odd:not-last:border-base-300/20'
+							>
 								{font.fontName}
 							</li>
 						</MenuItem>

@@ -32,18 +32,13 @@ export const useFontContext = create<FontInterface>()(
 	)
 );
 
-// function getInitialState(): boolean {
-// 	const store = JSON.parse(localStorage.getItem('darkMode') || '');
-// 	return store.state.isDarkmode;
-// }
-
 export const useDarkmodeContext = create<DarkmodeInterface>()(
 	devtools(
 		persist(
 			(set) => ({
+				// TODO: fix issue with flashing darkmode on refresh
+				// set initial state to stored state
 				isDarkmode: true,
-				// isDarkmode: getInitialState() || true,
-				// setDarkmode: (input) => set(() => ({ isDarkmode: input })),
 				toggleDarkmode: () =>
 					set((state) => ({ isDarkmode: !state.isDarkmode })),
 			}),

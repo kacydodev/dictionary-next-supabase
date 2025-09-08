@@ -49,6 +49,9 @@
 	footer {
 		@apply shrink;
 	}
+	li::marker {
+		@apply text-primary;
+	}
 }
 
 @layer components {
@@ -79,8 +82,8 @@
 	}
 
 	nav,
-	main > section,
-	main > form,
+	main section,
+	main form,
 	footer {
 		@apply px-6 md:px-0 space-y-6 md:space-y-8;
 	}

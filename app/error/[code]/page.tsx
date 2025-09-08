@@ -32,7 +32,7 @@ export default function ErrorPage() {
 		} else
 			return (
 				<section className='text-center space-y-4'>
-					<h2 className='text-2xl'>Network Error: {code}</h2>
+					<h2 className='text-2xl'>Unknown Error: {code}</h2>
 					<Link href='/' className='link link-secondary'>
 						Return home <ArrowUturnLeftIcon className='size-5 inline-flex' />
 					</Link>
