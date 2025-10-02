@@ -1,6 +1,7 @@
 # Dictionary App Next.js
 
 ![Website Deploy](https://deploy-badge.vercel.app/?url=https%3A%2F%2Fwww.dictionary-by-kacy.app%2F&logo=vercel&name=vercel)
+[![wakatime](https://wakatime.com/badge/github/kacydodev/dictionary-next-supabase.svg)](https://wakatime.com/badge/github/kacydodev/dictionary-next-supabase)
 
 Look up words quickly and easily. Find synonyms and antonyms based on meanings. Listen to pronunciation audio. Learn by examples.
 
