@@ -1,16 +1,14 @@
 'use client';
 
 import Link from 'next/link';
-import { useFontContext } from '@/utils/contexts';
+
 import { HeartIcon } from '@heroicons/react/24/solid';
 // import FooterLink from './FooterLink';
 
 export default function Footer() {
-	const currentFont = useFontContext();
-
 	return (
 		<footer
-			className={`${currentFont.fontSlug} text-sm md:text-base font-semibold bg-primary/20 text-primary`}
+			className={`text-sm md:text-base font-semibold bg-primary/20 text-primary`}
 		>
 			<p>
 				Made with <HeartIcon className='size-4 inline-flex text-secondary' /> by{' '}

@@ -9,7 +9,6 @@
 		"lint": "eslint"
 	},
 	"dependencies": {
-		"@headlessui/react": "^2.2.7",
 		"@heroicons/react": "^2.2.0",
 		"@supabase/ssr": "^0.7.0",
 		"@supabase/supabase-js": "^2.56.1",
@@ -19,8 +18,7 @@
 		"next": "15.5.2",
 		"react": "19.1.0",
 		"react-dom": "19.1.0",
-		"react-spinners": "^0.17.0",
-		"zustand": "^5.0.8"
+		"react-spinners": "^0.17.0"
 	},
 	"devDependencies": {
 		"@eslint/eslintrc": "^3",

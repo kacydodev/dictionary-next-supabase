@@ -1,6 +1,5 @@
 'use client';
 
-import { useDarkmodeContext } from '@/utils/contexts';
 import { MoonIcon as MoonIconOutline } from '@heroicons/react/24/outline';
 import { MoonIcon as MoonIconSolid } from '@heroicons/react/24/solid';
 import { useEffect } from 'react';

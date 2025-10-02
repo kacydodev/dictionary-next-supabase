@@ -5,11 +5,10 @@ import notFound from '../../../assets/images/undraw_page-eaten_b2rt.svg';
 import Link from 'next/link';
 import { ArrowUturnLeftIcon } from '@heroicons/react/24/outline';
 import Searchbar from '@/components/Searchbar';
-import { useFontContext } from '@/utils/contexts';
+
 import { useParams } from 'next/navigation';
 
 export default function ErrorPage() {
-	const currentFont = useFontContext();
 	const { code } = useParams();
 	const displayError = () => {
 		if (code === '404') {
@@ -41,7 +40,7 @@ export default function ErrorPage() {
 	};
 
 	return (
-		<main className={`space-y-16 ${currentFont.fontSlug}`}>
+		<main className={`space-y-16`}>
 			<Searchbar />
 			{displayError()}
 		</main>

@@ -1,6 +1,5 @@
 'use client';
 
-import { useFontContext } from '@/utils/contexts';
 import { Menu, MenuButton, MenuItems, MenuItem } from '@headlessui/react';
 import { ChevronDownIcon } from '@heroicons/react/24/outline';
 import type { FontType } from '@/utils/types';

@@ -11,8 +11,8 @@ export default function Header() {
 				<Image src={logo} width={27} alt='Dictionary App Logo' />
 			</Link>
 			<div className='flex gap-5 items-center text-sm md:text-base'>
-				<FontMenu />
-				<ThemeSwitcher />
+				{/* <FontMenu /> */}
+				{/* <ThemeSwitcher /> */}
 			</div>
 		</nav>
 	);

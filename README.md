@@ -2,13 +2,13 @@
 
 ![Website Deploy](https://deploy-badge.vercel.app/?url=https%3A%2F%2Fwww.dictionary-by-kacy.app%2F&logo=vercel&name=vercel)
 
-Look up words quickly and easily. Find synonyms and antonyms based on meanings. Listen to pronunciation audio. Learn by examples. Try typing in 'bastion'.
+Look up words quickly and easily. Find synonyms and antonyms based on meanings. Listen to pronunciation audio. Learn by examples.
 
 ## Introduction
 
 A straight-forward definition lookup with a few quality-of-life features:
 
-- Options to set typography as 'Sans', 'Sans-serif' or 'Monospaced' 
+- Options to set typography as 'Sans', 'Sans-serif' or 'Monospaced'
 - Switch between light and dark themes
 - Mobile and desktop optimised
 - Fully functional history navigation
