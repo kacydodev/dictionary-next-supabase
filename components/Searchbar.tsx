@@ -31,8 +31,14 @@ export default function Searchbar() {
 		setInput(formInput);
 	}
 
+	function handleSubmit() {
+		if (!error) {
+			return `/lookup/${input}`;
+		}
+	}
+
 	return (
-		<form action={`/lookup/${input}`} className='relative w-full mb-6'>
+		<form action={handleSubmit()} className='relative w-full'>
 			<div className='join w-full'>
 				<input
 					onMouseDown={() => setIsDirty(true)}

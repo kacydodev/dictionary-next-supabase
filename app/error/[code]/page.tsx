@@ -40,7 +40,7 @@ export default function ErrorPage() {
 	};
 
 	return (
-		<main className={`space-y-16`}>
+		<main className={`grid grid-rows-[auto_1fr] items-center`}>
 			<Searchbar />
 			{displayError()}
 		</main>
